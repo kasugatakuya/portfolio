@@ -25,7 +25,7 @@ export default function RootLayout({
           >
             <div>
               <a href="/" className="-m-1.5 p-1.5">
-                <img className="h-5 w-auto" src="vercel.svg" alt="" />
+                <div className="font-bold lg:text-xl">PORTFOLIO</div>
               </a>
             </div>
             <div className="lg:text-xl">
