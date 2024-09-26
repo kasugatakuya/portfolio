@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <main>
-      <div className="mb-80 mt-72 px-20 font-bold">
-        <div className="text-3xl">春日 拓也</div>
+      <div className="h-screen px-20 font-bold">
+        <div className="text-3xl pt-72">春日 拓也</div>
         <div className="text-6xl">TAKUYA KASUGA</div>
         <div className="text-md mt-20">
           1992年4月3日生まれ。長野県伊那市出身。
@@ -15,7 +15,7 @@ export default function About() {
           現在はフリーランスエンジニアとして様々な企業のフロントエンド開発案件に携わっています。
         </div>
       </div>
-      <div className="mb-20 mt-10 px-20 font-bold">
+      <div className="mb-20 px-20 font-bold">
         <div className="text-3xl">経歴</div>
         <div className="mt-5">
           <div>1992年04月: 長野県伊那市に誕生</div>
