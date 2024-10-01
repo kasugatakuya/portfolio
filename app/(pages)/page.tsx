@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <main className="mx-5 md:mx-20">
@@ -10,12 +12,12 @@ export default function Home() {
       </div>
       <div className="text-3xl underline">制作物</div>
       <div className=" my-10 items-center justify-center border bg-red-400 p-10 md:flex">
-        <img
+        <Image
           src="/blackjack.png"
           className="pb-5 md:mr-10"
           width={400}
           height={500}
-          alt=""
+          alt="BLACK JACK"
         />
         <div>
           <div className="mb-3 border-b text-lg text-white">BLACK JACK</div>
@@ -24,12 +26,12 @@ export default function Home() {
         </div>
       </div>
       <div className=" my-10 items-center justify-center border bg-violet-500 p-10 md:flex">
-        <img
+        <Image
           src="/ec.png"
           className=" pb-5 md:mr-10"
           width={400}
           height={500}
-          alt=""
+          alt="PCサイト(デモ)"
         />
         <div>
           <div className="mb-3 border-b text-lg text-white">PCサイト(デモ)</div>
@@ -38,12 +40,12 @@ export default function Home() {
         </div>
       </div>
       <div className=" my-10 items-center justify-center border bg-yellow-500 p-10 md:flex">
-        <img
+        <Image
           src="/stork.jpg"
           className="pb-5 md:mr-10"
           width={400}
           height={500}
-          alt=""
+          alt="STORK模写"
         />
         <div>
           <div className="mb-3 border-b text-lg text-white">STORK模写</div>
@@ -52,12 +54,12 @@ export default function Home() {
         </div>
       </div>
       <div className=" my-10 items-center justify-center border bg-blue-400 p-10 md:flex">
-        <img
+        <Image
           src="/webgame.png"
           className="pb-5 md:mr-10"
           width={400}
           height={500}
-          alt=""
+          alt="プログラミング道場"
         />
         <div>
           <div className="mb-3 border-b text-lg text-white">

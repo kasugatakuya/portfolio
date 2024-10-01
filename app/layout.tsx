@@ -6,8 +6,18 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '春日拓也のポートフォリオサイト',
-  description: 'フリーランスエンジニアの春日拓也のポートフォリオサイトです。',
+  title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
+  description:
+    'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策などの制作実績をご覧いただけます。',
+  keywords:
+    'フリーランスエンジニア, ポートフォリオ, Web開発, アプリ開発, SEO対策, 春日拓也',
+  openGraph: {
+    title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
+    description:
+      'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策などの制作実績をご覧いただけます。',
+    type: 'website',
+    url: 'https://portfolio-rose-tau-96.vercel.app/',
+  },
 }
 
 export default function RootLayout({
@@ -45,7 +55,7 @@ export default function RootLayout({
         {children}
 
         <footer className="text-md py-20 text-center">
-          © TAKUYA KASUGA 2020-2024
+          <p>© TAKUYA KASUGA 2020-{new Date().getFullYear()}</p>
         </footer>
       </body>
     </html>
