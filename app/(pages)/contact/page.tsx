@@ -1,5 +1,6 @@
 'use client'
 
+import Modal from '@/app/component/Modal' // モーダルコンポーネントをインポート
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
@@ -10,6 +11,15 @@ export default function Contact() {
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean
+    message: string
+    isError: boolean
+  }>({
+    isOpen: false,
+    message: '',
+    isError: false,
+  })
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -34,18 +44,36 @@ export default function Contact() {
       })
 
       if (response.ok) {
-        alert('メッセージが送信されました')
+        setModalState({
+          isOpen: true,
+          message:
+            'メッセージは正常に送信されました。 内容を確認の上、追ってご連絡させていただきます。',
+          isError: false,
+        })
         setFormData({ name: '', email: '', message: '' })
       } else {
         const errorData = await response.json()
-        alert(`エラーが発生しました: ${errorData.message}`)
+        setModalState({
+          isOpen: true,
+          message: `メッセージの送信中にエラーが発生しました。: ${errorData.message}`,
+          isError: true,
+        })
       }
     } catch (error) {
       console.error('Error:', error)
-      alert('エラーが発生しました。後でもう一度お試しください。')
+      setModalState({
+        isOpen: true,
+        message:
+          'メッセージの送信中にエラーが発生しました。後でもう一度お試しください。',
+        isError: true,
+      })
     } finally {
       setIsSubmitting(false)
     }
+  }
+
+  const closeModal = () => {
+    setModalState({ ...modalState, isOpen: false })
   }
 
   return (
@@ -58,9 +86,9 @@ export default function Contact() {
       </div>
       <div className="mx-5 md:mx-20">
         <form onSubmit={handleSubmit}>
-          <div className="mt-10">NAME(お名前)</div>
+          <div className="mb-2 mt-10">NAME(お名前)</div>
           <input
-            className="h-[80px] w-full bg-gray-300 px-2"
+            className="h-[60px] w-full rounded bg-gray-300 px-3"
             type="text"
             name="name"
             value={formData.name}
@@ -68,9 +96,9 @@ export default function Contact() {
             placeholder="お名前"
             required
           />
-          <div className="mt-10">MAIL ADRESS(メールアドレス)</div>
+          <div className="mb-2 mt-10">MAIL ADRESS(メールアドレス)</div>
           <input
-            className="h-[80px] w-full bg-gray-300 px-2"
+            className="h-[60px] w-full rounded bg-gray-300 px-3"
             type="email"
             name="email"
             value={formData.email}
@@ -78,9 +106,9 @@ export default function Contact() {
             placeholder="メールアドレス"
             required
           />
-          <div className="mt-10">MESSAGE(メッセージ)</div>
+          <div className="mb-2 mt-10">MESSAGE(メッセージ)</div>
           <textarea
-            className="h-[300px] w-full bg-gray-300 p-2"
+            className="h-[300px] w-full rounded bg-gray-300 p-3"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -89,7 +117,7 @@ export default function Contact() {
           />
           <div className="flex justify-center">
             <button
-              className="my-10 flex justify-center bg-amber-700 px-10 py-3 text-white disabled:opacity-50"
+              className="my-10 flex justify-center rounded bg-amber-700 px-10 py-3 text-white hover:bg-amber-800 disabled:opacity-50"
               disabled={isSubmitting}
             >
               {isSubmitting ? '送信中...' : '送信する'}
@@ -97,6 +125,12 @@ export default function Contact() {
           </div>
         </form>
       </div>
+      <Modal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        message={modalState.message}
+        isError={modalState.isError}
+      />
     </main>
   )
 }
