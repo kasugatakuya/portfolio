@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2018",
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,10 +9,11 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -24,12 +25,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"],
+      "@@/*": ["./*"]
     }
   },
   "include": [
@@ -39,7 +36,8 @@
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
     "jest.config.ts",
-    "out/types/**/*.ts"
+    "out/types/**/*.ts",
+    "netlify/functions/**/*"
   ],
   "exclude": [
     "node_modules"

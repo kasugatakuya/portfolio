@@ -1,0 +1,17 @@
+[
+build
+]
+  command = "next build && tsc -p netlify/functions/tsconfig.json"
+  publish = "out"
+
+[
+functions
+]
+  directory = "functions-build"
+
+[[
+redirects
+]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

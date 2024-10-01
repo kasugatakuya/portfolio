@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  distDir: "out",
+  // 静的サイトの設定
+  // output: "export",
+  // distDir: "out",
+
+  reactStrictMode: true,
 };
 
 export default nextConfig;
