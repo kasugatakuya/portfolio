@@ -52,7 +52,6 @@ export default function Contact() {
     <main>
       <div className="title flex h-screen flex-col items-center justify-center font-bold">
         <div className="text-6xl">CONTACT</div>
-        <div className="mt-5 text-xl">〜Under Construction〜</div>
       </div>
       <div className="mx-5 text-center">
         「励ましのお言葉」から「お仕事のご相談」まで、ポジティブかつ幅広い声をお待ちしております。
