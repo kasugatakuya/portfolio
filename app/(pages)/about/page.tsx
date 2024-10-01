@@ -1,14 +1,14 @@
 export default function About() {
   return (
     <main>
-      <div className="px-5 font-bold flex flex-col justify-center h-screen  md:px-20">
+      <div className="flex h-screen flex-col justify-center px-5 font-bold md:px-20 ">
         <div className="text-3xl">春日 拓也</div>
-        <div className="text-6xl">TAKUYA KASUGA</div>
+        <div className="text-5xl">TAKUYA KASUGA</div>
 
-        <div className="text-md mt-20">
+        <div className="text-md mt-10">
           1992年4月3日生まれ。長野県伊那市出身。
         </div>
-        <div className="mt-10">
+        <div className="mt-6">
           新卒でアポロメディカル株式会社に入社し、薬剤師として調剤薬局に3年間勤務。
           <br />
           その後、エンジニアに転職し株式会社くすりの窓口でお薬手帳WEBのフロントエンドのテックリーダーなどを経験。

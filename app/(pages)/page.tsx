@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="mx-5 md:mx-20">
       <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
-        <div className="text-6xl">TAKUYA KASUGA</div>
+        <div className="text-5xl">TAKUYA KASUGA</div>
         <div className="md:flex">
           <div className="text-xl">エンジニア</div>
           <div className="text-xl">春日拓也のポートフォリオサイト</div>
