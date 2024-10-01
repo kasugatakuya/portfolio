@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <main>
-      <div className="px-5 font-bold md:h-screen  md:px-20">
-        <div className="pt-72 text-3xl">春日 拓也</div>
+      <div className="px-5 font-bold flex flex-col justify-center h-screen  md:px-20">
+        <div className="text-3xl">春日 拓也</div>
         <div className="text-6xl">TAKUYA KASUGA</div>
 
         <div className="text-md mt-20">
@@ -16,7 +16,7 @@ export default function About() {
           現在はフリーランスエンジニアとして様々な企業のフロントエンド開発案件に携わっています。
         </div>
       </div>
-      <div className="mt-20 bg-[url(/specialdetail.jpg)] md:mt-0">
+      <div className="bg-[url(/specialdetail.jpg)]">
         <div className=" mb-20 px-5 font-bold md:px-20">
           <div className="pt-8 text-3xl text-white">経歴</div>
           <div className="mt-5 text-white">

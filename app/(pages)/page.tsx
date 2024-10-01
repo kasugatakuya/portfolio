@@ -1,10 +1,8 @@
-import Image from 'next/image'
-
 export default function Home() {
   return (
     <main className="mx-5 md:mx-20">
       <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
-        <div className="text-5xl">TAKUYA　KASUGA</div>
+        <div className="text-6xl">TAKUYA KASUGA</div>
         <div className="md:flex">
           <div className="text-xl">エンジニア</div>
           <div className="text-xl">春日拓也のポートフォリオサイト</div>
@@ -12,7 +10,7 @@ export default function Home() {
       </div>
       <div className="text-3xl underline">制作物</div>
       <div className=" my-10 items-center justify-center border bg-red-400 p-10 md:flex">
-        <Image
+        <img
           src="/blackjack.png"
           className="pb-5 md:mr-10"
           width={400}
@@ -26,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       <div className=" my-10 items-center justify-center border bg-violet-500 p-10 md:flex">
-        <Image
+        <img
           src="/ec.png"
           className=" pb-5 md:mr-10"
           width={400}
@@ -40,7 +38,7 @@ export default function Home() {
         </div>
       </div>
       <div className=" my-10 items-center justify-center border bg-yellow-500 p-10 md:flex">
-        <Image
+        <img
           src="/stork.jpg"
           className="pb-5 md:mr-10"
           width={400}
@@ -54,7 +52,7 @@ export default function Home() {
         </div>
       </div>
       <div className=" my-10 items-center justify-center border bg-blue-400 p-10 md:flex">
-        <Image
+        <img
           src="/webgame.png"
           className="pb-5 md:mr-10"
           width={400}
