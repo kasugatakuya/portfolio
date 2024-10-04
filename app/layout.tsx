@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
   description:
-    'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策などの制作実績をご覧いただけます。',
+    'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策,ホームページなどの制作実績をご覧いただけます。',
   keywords:
-    'フリーランスエンジニア, ポートフォリオ, Web開発, アプリ開発, SEO対策, 春日拓也',
+    'フリーランス, エンジニア, ポートフォリオ, Web開発, アプリ開発, SEO対策, 春日拓也, kasuga takuya, カスガタクヤ, 人気, たくや, かすが,依頼, ホームページ',
   openGraph: {
     title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
     description:
@@ -30,23 +30,23 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="fixed top-0 w-full">
           <nav
-            className="flex items-center justify-between px-6 py-2 lg:px-20 lg:py-6"
+            className="flex items-center justify-end px-6 py-2 lg:px-20 lg:py-6"
             aria-label="Global"
           >
-            <div>
-              <a href="/" className="-m-1.5 p-1.5">
-                <div className="font-bold lg:text-xl">PORTFOLIO</div>
-              </a>
-            </div>
-            <div className="lg:text-xl">
+            <div className="flex">
               <Link href="/" className="font-bold">
-                WORKS
+                <div className="lg:text-xl"> WORKS</div>
+                <div className="text-xs">仕事内容</div>
               </Link>
               <Link href="/about" className="px-4 font-bold lg:px-12">
-                ABOUT
+                {' '}
+                <div className="lg:text-xl"> ABOUT</div>
+                <div className="text-xs">経歴</div>
               </Link>
               <Link href="/contact" className="font-bold">
-                CONTACT
+                {' '}
+                <div className="lg:text-xl"> CONTACT</div>
+                <div className="text-xs">お問合せ</div>
               </Link>
             </div>
           </nav>
