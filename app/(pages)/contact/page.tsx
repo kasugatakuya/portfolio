@@ -5,6 +5,12 @@ import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
 export default function Contact() {
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -131,6 +137,12 @@ export default function Contact() {
         message={modalState.message}
         isError={modalState.isError}
       />
+      <div
+        className=" fixed bottom-10 right-10 size-8 bg-gray-400 pt-1 text-center "
+        onClick={() => scrollTop()}
+      >
+        ⬆️
+      </div>
     </main>
   )
 }

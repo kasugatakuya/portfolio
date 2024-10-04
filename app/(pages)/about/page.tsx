@@ -1,4 +1,11 @@
+'use client'
 export default function About() {
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   return (
     <main>
       <div className="flex h-screen flex-col justify-center px-5 font-bold md:px-20 ">
@@ -17,7 +24,7 @@ export default function About() {
         </div>
       </div>
       <div className="bg-[url(/specialdetail.jpg)]">
-        <div className=" mb-20 px-5 font-bold md:px-20">
+        <div className=" mb-10 px-5 font-bold md:px-20">
           <div className="pt-8 text-3xl text-white">経歴</div>
           <div className="mt-5 text-white">
             <div>1992年04月: 長野県伊那市に誕生</div>
@@ -44,6 +51,20 @@ export default function About() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mb-10">
+        <a
+          href="https://www.wantedly.com/id/takuya_kasuga"
+          className="px-5 font-bold text-blue-600 md:px-20"
+        >
+          *詳しい経歴はこちら*
+        </a>
+      </div>{' '}
+      <div
+        className=" fixed bottom-10 right-10 size-8 bg-gray-400 pt-1 text-center "
+        onClick={() => scrollTop()}
+      >
+        ⬆️
       </div>
     </main>
   )

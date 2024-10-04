@@ -1,4 +1,11 @@
+'use client'
 export default function Home() {
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
   return (
     <main className="mx-5 md:mx-20">
       <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
@@ -67,6 +74,20 @@ export default function Home() {
           <div>タイピングゲームとITクイズが楽しめる。</div>
           <div>Ruby on Rails・JavaScriptで作成。</div>
         </div>
+      </div>
+      <div className="mb-10">
+        <a
+          href="https://github.com/kasugatakuya"
+          className="flex justify-center text-blue-600"
+        >
+          *実際に制作したアプリはこちら*
+        </a>
+      </div>
+      <div
+        className=" fixed bottom-10 right-10 size-8 bg-gray-400 pt-1 text-center "
+        onClick={() => scrollTop()}
+      >
+        ⬆️
       </div>
     </main>
   )
