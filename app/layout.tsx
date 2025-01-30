@@ -11,12 +11,50 @@ export const metadata: Metadata = {
     'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策,ホームページなどの制作実績をご覧いただけます。',
   keywords:
     'フリーランス, エンジニア, ポートフォリオ, Web開発, アプリ開発, SEO対策, 春日拓也, kasuga takuya, カスガタクヤ, 人気, たくや, かすが,依頼, ホームページ',
+
+  // metadataBaseを追加
+  metadataBase: new URL('https://portfolio-rose-tau-96.vercel.app'),
+
   openGraph: {
     title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
     description:
       'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策などの制作実績をご覧いただけます。',
     type: 'website',
-    url: 'https://portfolio-rose-tau-96.vercel.app/',
+    url: 'https://portfolio-rose-tau-96.vercel.app',
+    siteName: '春日拓也のポートフォリオサイト', // サイト名を追加
+    locale: 'ja_JP', // 日本語ロケールを追加
+  },
+
+  // canonicalを追加
+  alternates: {
+    canonical: 'https://portfolio-rose-tau-96.vercel.app',
+  },
+
+  // robotsを追加
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  // Twitter Cardsを追加
+  twitter: {
+    card: 'summary_large_image',
+    title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
+    description:
+      'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策などの制作実績をご覧いただけます。',
+  },
+
+  // verification を追加（Google Search Consoleを使用している場合）
+  // Google Search Console の設定→所有権の確認→HTMLタグのコードのcontent属性の値を指定
+  verification: {
+    google: 'r4vs5K6kyRpFbT2eQ3xlFxlQbUmRrk_8z6irkNv4HmM',
   },
 }
 
