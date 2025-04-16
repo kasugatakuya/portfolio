@@ -1,4 +1,6 @@
 'use client'
+import Image from 'next/image'
+import Link from 'next/link'
 export default function About() {
   const scrollTop = () => {
     window.scrollTo({
@@ -8,19 +10,25 @@ export default function About() {
   }
   return (
     <main>
-      <div className="flex h-screen flex-col justify-center px-5 font-bold md:px-20 ">
-        <div className="text-3xl">春日 拓也</div>
-        <div className="text-5xl">TAKUYA KASUGA</div>
+      <div className="flex h-screen flex-col justify-center px-5 font-bold md:px-20">
+        <div className="text-3xl font-medium text-gray-700">春日 拓也</div>
+        <div className="title border-b border-gray-200 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text pb-2 text-5xl font-extrabold tracking-tight text-transparent transition-all duration-700 hover:from-gray-700 hover:to-black md:text-6xl">
+          TAKUYA KASUGA
+        </div>
 
-        <div className="text-md mt-10">
+        <div className="text-md mt-10 font-medium text-gray-700">
           1992年4月3日生まれ。長野県伊那市出身。
         </div>
-        <div className="mt-6">
-          新卒でアポロメディカル株式会社に入社し、薬剤師として調剤薬局に3年間勤務。
-          <br />
-          その後、エンジニアに転職し株式会社くすりの窓口でお薬手帳WEBのフロントエンドのテックリーダーなどを経験。
-          <br />
-          現在はフリーランスエンジニアとして様々な企業のフロントエンド開発案件に携わっています。
+        <div className="mt-6 space-y-2 font-medium leading-relaxed text-gray-600">
+          <p>
+            新卒でアポロメディカル株式会社に入社し、薬剤師として調剤薬局に3年間勤務。
+          </p>
+          <p>
+            その後、エンジニアに転職し株式会社くすりの窓口でお薬手帳WEBのフロントエンドのテックリーダーなどを経験。
+          </p>
+          <p>
+            現在はフリーランスエンジニアとして様々な企業のフロントエンド開発案件に携わっています。
+          </p>
         </div>
       </div>
       <div className="bg-[url(/specialdetail.jpg)]">
@@ -53,18 +61,20 @@ export default function About() {
         </div>
       </div>
       <div className="mb-10">
-        <a
+        <Link
           href="https://www.wantedly.com/id/takuya_kasuga"
           className="px-5 font-bold text-blue-600 md:px-20"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           *詳しい経歴はこちら*
-        </a>
-      </div>{' '}
+        </Link>
+      </div>
       <div
-        className=" fixed bottom-10 right-10 size-8 bg-gray-400 pt-1 text-center "
+        className="size-8text-center fixed bottom-10 right-10 cursor-pointer "
         onClick={() => scrollTop()}
       >
-        ⬆️
+        <Image src="/up-icon.png" width={50} height={50} alt="上矢印" />
       </div>
     </main>
   )

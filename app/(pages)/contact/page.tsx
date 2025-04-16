@@ -1,6 +1,7 @@
 'use client'
 
 import Modal from '@/app/component/Modal' // モーダルコンポーネントをインポート
+import Image from 'next/image'
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
@@ -83,9 +84,16 @@ export default function Contact() {
   }
 
   return (
-    <main>
-      <div className="title flex h-screen flex-col items-center justify-center font-bold">
-        <div className="text-5xl">CONTACT</div>
+    <main className="mx-5 md:mx-20">
+      <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
+        <div className="border-b border-gray-200 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text pb-2 text-5xl font-extrabold tracking-tight text-transparent transition-all duration-700 hover:from-gray-700 hover:to-black md:text-7xl">
+          CONTACT
+        </div>
+        <div className="mt-4 items-center space-y-2 md:flex md:space-x-4 md:space-y-0">
+          <div className="text-xl font-medium text-gray-700 md:text-2xl">
+            お問い合わせ
+          </div>
+        </div>
       </div>
       <div className="mx-5 text-center">
         「励ましのお言葉」から「お仕事のご相談」まで、ポジティブかつ幅広い声をお待ちしております。
@@ -123,7 +131,7 @@ export default function Contact() {
           />
           <div className="flex justify-center">
             <button
-              className="my-10 flex justify-center rounded bg-amber-700 px-10 py-3 text-white hover:bg-amber-800 disabled:opacity-50"
+              className="my-10 flex justify-center rounded bg-orange-600 px-10 py-3 text-white hover:bg-amber-800 disabled:opacity-50"
               disabled={isSubmitting}
             >
               {isSubmitting ? '送信中...' : '送信する'}
@@ -138,10 +146,10 @@ export default function Contact() {
         isError={modalState.isError}
       />
       <div
-        className=" fixed bottom-10 right-10 size-8 bg-gray-400 pt-1 text-center "
+        className="size-8text-center fixed bottom-10 right-10 cursor-pointer "
         onClick={() => scrollTop()}
       >
-        ⬆️
+        <Image src="/up-icon.png" width={50} height={50} alt="上矢印" />
       </div>
     </main>
   )

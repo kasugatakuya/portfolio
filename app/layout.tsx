@@ -84,7 +84,7 @@ export default function RootLayout({
               <Link href="/contact" className="font-bold">
                 {' '}
                 <div className="lg:text-xl"> CONTACT</div>
-                <div className="text-xs">お問合せ</div>
+                <div className="text-xs">お問い合わせ</div>
               </Link>
             </div>
           </nav>
