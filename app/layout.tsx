@@ -1,3 +1,4 @@
+import UpButton from '@/app/components/UpButton'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
@@ -91,6 +92,8 @@ export default function RootLayout({
         </header>
 
         {children}
+
+        <UpButton />
 
         <footer className="text-md py-20 text-center">
           <p>© TAKUYA KASUGA 2020-{new Date().getFullYear()}</p>

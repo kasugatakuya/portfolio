@@ -2,12 +2,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 export default function Home() {
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
   return (
     <main className="mx-5 md:mx-20">
       <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
@@ -143,13 +137,6 @@ export default function Home() {
         >
           *実際に制作したアプリはこちら*
         </Link>
-      </div>
-
-      <div
-        className="size-8text-center fixed bottom-10 right-10 cursor-pointer "
-        onClick={() => scrollTop()}
-      >
-        <Image src="/up-icon.png" width={50} height={50} alt="上矢印" />
       </div>
     </main>
   )

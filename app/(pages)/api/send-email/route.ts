@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !message) {
       return NextResponse.json(
         { message: '必須フィールドが不足しています' },
-        { status: 400 }
+        { status: 400 },
       )
     }
 
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     console.error('Error in API route:', error)
     return NextResponse.json(
       { message: 'メール送信に失敗しました' },
-      { status: 500 }
+      { status: 500 },
     )
   }
 }

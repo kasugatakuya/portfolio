@@ -1,13 +1,6 @@
 'use client'
-import Image from 'next/image'
 import Link from 'next/link'
 export default function About() {
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
   return (
     <main>
       <div className="flex h-screen flex-col justify-center px-5 font-bold md:px-20">
@@ -69,12 +62,6 @@ export default function About() {
         >
           *詳しい経歴はこちら*
         </Link>
-      </div>
-      <div
-        className="size-8text-center fixed bottom-10 right-10 cursor-pointer "
-        onClick={() => scrollTop()}
-      >
-        <Image src="/up-icon.png" width={50} height={50} alt="上矢印" />
       </div>
     </main>
   )

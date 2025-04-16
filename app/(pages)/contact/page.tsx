@@ -1,17 +1,10 @@
 'use client'
 
-import Modal from '@/app/component/Modal' // モーダルコンポーネントをインポート
-import Image from 'next/image'
+import Modal from '@/app/components/Modal' // モーダルコンポーネントをインポート
 import type { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react'
 
 export default function Contact() {
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -145,12 +138,6 @@ export default function Contact() {
         message={modalState.message}
         isError={modalState.isError}
       />
-      <div
-        className="size-8text-center fixed bottom-10 right-10 cursor-pointer "
-        onClick={() => scrollTop()}
-      >
-        <Image src="/up-icon.png" width={50} height={50} alt="上矢印" />
-      </div>
     </main>
   )
 }
