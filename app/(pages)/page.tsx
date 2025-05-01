@@ -68,20 +68,26 @@ export default function Home() {
           </div>
         </div>
       </Link>
-      <div className=" my-10 items-center justify-center border bg-red-400 p-10 md:flex">
-        <Image
-          src="/blackjack.png"
-          className="pb-5 md:mr-10"
-          width={400}
-          height={500}
-          alt="BLACK JACK"
-        />
-        <div className="md:w-[32rem]">
-          <div className="mb-3 border-b text-lg text-white">BLACK JACK</div>
-          <div>トランプのブラックジャクゲーム。</div>
-          <div>JavaScriptで作成。</div>
+      <Link
+        href="https://myblackjack.web.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className=" my-10 items-center justify-center border bg-red-400 p-10 md:flex">
+          <Image
+            src="/blackjack.png"
+            className="pb-5 md:mr-10"
+            width={400}
+            height={500}
+            alt="BLACK JACK"
+          />
+          <div className="md:w-[32rem]">
+            <div className="mb-3 border-b text-lg text-white">BLACK JACK</div>
+            <div>トランプのブラックジャクゲーム。</div>
+            <div>JavaScriptで作成。</div>
+          </div>
         </div>
-      </div>
+      </Link>
       <div className=" my-10 items-center justify-center border bg-violet-500 p-10 md:flex">
         <Image
           src="/ec.png"
