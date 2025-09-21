@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="text-3xl ">制作物</div>
+      <div className="text-3xl ">個人開発物</div>
       <Link
         href="https://monkey-mauve-alpha.vercel.app/"
         target="_blank"
@@ -39,6 +39,31 @@ export default function Home() {
             <div>パンクロックバンドMONKEYの公式ホームページ</div>
             <div>
               MONKEYに関するニュース・ライブ情報・楽曲・バンドメンバー情報をご覧いただけます。
+            </div>
+            <div>Next.jsとTypeScriptで作成。</div>
+          </div>
+        </div>
+      </Link>
+      <Link
+        href="https://endroll.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="my-10 items-center justify-center border bg-yellow-500 p-10 md:flex">
+          <Image
+            src="/endroll.png"
+            className="pb-5 md:mr-10"
+            width={400}
+            height={500}
+            alt="MONKEY"
+          />
+          <div className="md:w-[32rem]">
+            <div className="mb-3 border-b text-lg text-white">
+              Endrollのホームページ
+            </div>
+            <div>ロックバンドEndrollの公式ホームページ</div>
+            <div>
+              Endrollに関するニュース・ライブ情報・楽曲・バンドメンバー情報をご覧いただけます。
             </div>
             <div>Next.jsとTypeScriptで作成。</div>
           </div>
@@ -88,52 +113,6 @@ export default function Home() {
           </div>
         </div>
       </Link>
-      <div className=" my-10 items-center justify-center border bg-violet-500 p-10 md:flex">
-        <Image
-          src="/ec.png"
-          className=" pb-5 md:mr-10"
-          width={400}
-          height={500}
-          alt="PCサイト(デモ)"
-        />
-        <div className="md:w-[32rem]">
-          <div className="mb-3 border-b text-lg text-white">PCサイト(デモ)</div>
-          <div>様々な服が買えるECサイトのデモ。</div>
-          <div>React+Reduxで作成。</div>
-        </div>
-      </div>
-      <div className=" my-10 items-center justify-center border bg-yellow-500 p-10 md:flex">
-        <Image
-          src="/stork.jpg"
-          className="pb-5 md:mr-10"
-          width={400}
-          height={500}
-          alt="STORK模写"
-        />
-        <div className="md:w-[32rem]">
-          <div className="mb-3 border-b text-lg text-white">STORK模写</div>
-          <div>WordPressのテーマであるSTORKの模写。</div>
-          <div>HTML・CSS・jQueryで作成。</div>
-        </div>
-      </div>
-      <div className=" my-10 items-center justify-center border bg-blue-400 p-10 md:flex">
-        <Image
-          src="/webgame.png"
-          className="pb-5 md:mr-10"
-          width={400}
-          height={500}
-          alt="プログラミング道場"
-        />
-        <div className="md:w-[32rem]">
-          <div className="mb-3 border-b text-lg text-white">
-            プログラミング道場
-          </div>
-          <div>プログラミングに興味を持つために作ったサイト。</div>
-          <div>タイピングゲームとITクイズが楽しめる。</div>
-          <div>Ruby on Rails・JavaScriptで作成。</div>
-        </div>
-      </div>
-
       <div className="mb-10">
         <Link
           href="https://github.com/kasugatakuya"
