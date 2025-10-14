@@ -4,16 +4,16 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main className="mx-5 md:mx-20">
-      <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
-        <div className="border-b border-gray-200 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text pb-2 text-5xl font-extrabold tracking-tight text-transparent transition-all duration-700 hover:from-gray-700 hover:to-black md:text-7xl">
+      <div className="flex h-screen flex-col justify-center font-bold md:items-center">
+        <div className="oswald-font border-b border-gray-200 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text pb-2 text-5xl font-extrabold tracking-tight text-transparent transition-all duration-700 hover:from-gray-700 hover:to-black md:text-7xl">
           TAKUYA KASUGA
         </div>
         <div className="mt-4 items-center space-y-2 md:flex md:space-x-4 md:space-y-0">
-          <div className="text-xl font-medium text-gray-700 md:text-2xl">
+          <div className="noto-sans-jp-font text-xl font-medium text-gray-700 md:text-2xl">
             エンジニア
           </div>
           <div className="hidden h-6 w-px bg-gray-300 md:block"></div>
-          <div className="text-xl font-medium text-gray-600 md:text-2xl">
+          <div className="noto-sans-jp-font text-xl font-medium text-gray-600 md:text-2xl">
             春日拓也のポートフォリオサイト
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function Home() {
             alt="MONKEY"
           />
           <div className="md:w-[32rem]">
-            <div className="mb-3 border-b text-lg text-white">
+            <div className="oswald-font mb-3 border-b text-lg tracking-wide text-white">
               MONKEYのホームページ
             </div>
             <div>パンクロックバンドMONKEYの公式ホームページ</div>
@@ -58,7 +58,7 @@ export default function Home() {
             alt="MONKEY"
           />
           <div className="md:w-[32rem]">
-            <div className="mb-3 border-b text-lg text-white">
+            <div className="oswald-font mb-3 border-b text-lg tracking-wide text-white">
               Endrollのホームページ
             </div>
             <div>ロックバンドEndrollの公式ホームページ</div>
@@ -83,7 +83,7 @@ export default function Home() {
             alt="プログラミング道場"
           />
           <div className="md:w-[32rem]">
-            <div className="mb-3 border-b text-lg text-white">
+            <div className="oswald-font mb-3 border-b text-lg tracking-wide text-white">
               地理タイピングゲーム
             </div>
             <div>
@@ -107,7 +107,9 @@ export default function Home() {
             alt="BLACK JACK"
           />
           <div className="md:w-[32rem]">
-            <div className="mb-3 border-b text-lg text-white">BLACK JACK</div>
+            <div className="oswald-font mb-3 border-b text-lg tracking-wide text-white">
+              BLACK JACK
+            </div>
             <div>トランプのブラックジャクゲーム。</div>
             <div>JavaScriptで作成。</div>
           </div>

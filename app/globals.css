@@ -20,10 +20,16 @@ header {
   color: rgb(184, 169, 142);
 }
 
-.title {
-  font-family: reitam, 游ゴシック体, "Yu Gothic", YuGothic,
-    "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo,
-    Osaka, "MS PGothic", sans-serif;
+.oswald-font {
+  font-family: var(--font-oswald), sans-serif;
+}
+
+.noto-sans-jp-font {
+  font-family: var(--font-noto-sans-jp), sans-serif;
+}
+
+.bebas-neue-font {
+  font-family: var(--font-bebas-neue), sans-serif;
 }
 
 footer {

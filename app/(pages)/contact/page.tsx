@@ -78,24 +78,24 @@ export default function Contact() {
 
   return (
     <main className="mx-5 md:mx-20">
-      <div className="title flex h-screen flex-col justify-center font-bold md:items-center">
-        <div className="border-b border-gray-200 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text pb-2 text-5xl font-extrabold tracking-tight text-transparent transition-all duration-700 hover:from-gray-700 hover:to-black md:text-7xl">
+      <div className="flex h-screen flex-col justify-center font-bold md:items-center">
+        <div className="bebas-neue-font border-b border-gray-200 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text pb-2 text-5xl font-extrabold tracking-tight text-transparent transition-all duration-700 hover:from-gray-700 hover:to-black md:text-7xl">
           CONTACT
         </div>
         <div className="mt-4 items-center space-y-2 md:flex md:space-x-4 md:space-y-0">
-          <div className="text-xl font-medium text-gray-700 md:text-2xl">
+          <div className="noto-sans-jp-font text-xl font-medium text-gray-700 md:text-2xl">
             お問い合わせ
           </div>
         </div>
       </div>
-      <div className="mx-5 text-center">
+      <div className="noto-sans-jp-font mx-5 text-center">
         「励ましのお言葉」から「お仕事のご相談」まで、ポジティブかつ幅広い声をお待ちしております。
       </div>
       <div className="mx-5 md:mx-20">
         <form onSubmit={handleSubmit}>
-          <div className="mb-2 mt-10">NAME(お名前)</div>
+          <div className="oswald-font mb-2 mt-10 tracking-wide">NAME <span className="noto-sans-jp-font text-sm">(お名前)</span></div>
           <input
-            className="h-[60px] w-full rounded bg-gray-300 px-3"
+            className="noto-sans-jp-font h-[60px] w-full rounded bg-gray-300 px-3"
             type="text"
             name="name"
             value={formData.name}
@@ -103,9 +103,9 @@ export default function Contact() {
             placeholder="お名前"
             required
           />
-          <div className="mb-2 mt-10">MAIL ADRESS(メールアドレス)</div>
+          <div className="oswald-font mb-2 mt-10 tracking-wide">MAIL ADDRESS <span className="noto-sans-jp-font text-sm">(メールアドレス)</span></div>
           <input
-            className="h-[60px] w-full rounded bg-gray-300 px-3"
+            className="noto-sans-jp-font h-[60px] w-full rounded bg-gray-300 px-3"
             type="email"
             name="email"
             value={formData.email}
@@ -113,9 +113,9 @@ export default function Contact() {
             placeholder="メールアドレス"
             required
           />
-          <div className="mb-2 mt-10">MESSAGE(メッセージ)</div>
+          <div className="oswald-font mb-2 mt-10 tracking-wide">MESSAGE <span className="noto-sans-jp-font text-sm">(メッセージ)</span></div>
           <textarea
-            className="h-[300px] w-full rounded bg-gray-300 p-3"
+            className="noto-sans-jp-font h-[300px] w-full rounded bg-gray-300 p-3"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -124,7 +124,7 @@ export default function Contact() {
           />
           <div className="flex justify-center">
             <button
-              className="my-10 flex justify-center rounded bg-orange-600 px-10 py-3 text-white hover:bg-amber-800 disabled:opacity-50"
+              className="oswald-font my-10 flex justify-center rounded bg-orange-600 px-10 py-3 tracking-wider text-white hover:bg-amber-800 disabled:opacity-50"
               disabled={isSubmitting}
             >
               {isSubmitting ? '送信中...' : '送信する'}

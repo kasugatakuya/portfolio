@@ -1,10 +1,28 @@
 import UpButton from '@/app/components/UpButton'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Bebas_Neue, Noto_Sans_JP, Oswald } from 'next/font/google'
 import Link from 'next/link'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const bebasNeue = Bebas_Neue({ 
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-bebas-neue',
+})
+const notoSansJP = Noto_Sans_JP({ 
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-noto-sans-jp',
+})
+const oswald = Oswald({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-oswald',
+})
 
 export const metadata: Metadata = {
   title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
@@ -66,26 +84,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body className={`${inter.className} ${bebasNeue.variable} ${notoSansJP.variable} ${oswald.variable}`}>
         <header className="fixed top-0 w-full">
           <nav
             className="flex items-center justify-end px-6 py-2 lg:px-20 lg:py-6"
             aria-label="Global"
           >
             <div className="flex">
-              <Link href="/" className="font-bold">
-                <div className="lg:text-xl"> WORKS</div>
-                <div className="text-xs">仕事内容</div>
+              <Link href="/" className="bebas-neue-font font-bold">
+                <div className="tracking-wider lg:text-xl"> WORKS</div>
+                <div className="noto-sans-jp-font text-xs">仕事内容</div>
               </Link>
-              <Link href="/about" className="px-4 font-bold lg:px-12">
+              <Link href="/about" className="bebas-neue-font px-4 font-bold lg:px-12">
                 {' '}
-                <div className="lg:text-xl"> ABOUT</div>
-                <div className="text-xs">経歴</div>
+                <div className="tracking-wider lg:text-xl"> ABOUT</div>
+                <div className="noto-sans-jp-font text-xs">経歴</div>
               </Link>
-              <Link href="/contact" className="font-bold">
+              <Link href="/contact" className="bebas-neue-font font-bold">
                 {' '}
-                <div className="lg:text-xl"> CONTACT</div>
-                <div className="text-xs">お問い合わせ</div>
+                <div className="tracking-wider lg:text-xl"> CONTACT</div>
+                <div className="noto-sans-jp-font text-xs">お問い合わせ</div>
               </Link>
             </div>
           </nav>
