@@ -30,6 +30,7 @@ export default function Home() {
             className="pb-5 md:mr-10"
             width={400}
             height={500}
+            style={{ width: 'auto', height: 'auto' }}
             alt="MONKEY"
           />
           <div className="md:w-[32rem]">
@@ -55,7 +56,8 @@ export default function Home() {
             className="pb-5 md:mr-10"
             width={400}
             height={500}
-            alt="MONKEY"
+            style={{ width: 'auto', height: 'auto' }}
+            alt="Endroll"
           />
           <div className="md:w-[32rem]">
             <div className="oswald-font mb-3 border-b text-lg tracking-wide text-white">
@@ -80,6 +82,7 @@ export default function Home() {
             className="pb-5 md:mr-10"
             width={400}
             height={500}
+            style={{ width: 'auto', height: 'auto' }}
             alt="プログラミング道場"
           />
           <div className="md:w-[32rem]">
@@ -104,6 +107,7 @@ export default function Home() {
             className="pb-5 md:mr-10"
             width={400}
             height={500}
+            style={{ width: 'auto', height: 'auto' }}
             alt="BLACK JACK"
           />
           <div className="md:w-[32rem]">
