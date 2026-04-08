@@ -78,7 +78,7 @@ export default function Home() {
       >
         <div className="my-10 items-center justify-center border bg-green-500 p-10 md:flex">
           <Image
-            src="/typing-game.png"
+            src="/typing-indo.png"
             className="pb-5 md:mr-10"
             width={400}
             height={500}
