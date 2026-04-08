@@ -2,31 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Color Palette (Warm Orange Theme)
+ * Based on 60-30-10 Rule & Color Theory
+ *
+ * 60% - Base (Background): Warm off-white
+ * 30% - Secondary (Cards, UI elements): Soft cream
+ * 10% - Accent (CTA, highlights): Rich orange
+ */
+
 :root {
-  --foreground-rgb: 229, 229, 229;
-  --background-rgb: 10, 10, 10;
-  --accent-cyan: 6, 182, 212;
-  --accent-purple: 168, 85, 247;
+  /* Base Colors */
+  --bg-primary: 255, 250, 245;      /* #FFFAF5 - Warm white */
+  --bg-secondary: 254, 246, 238;    /* #FEF6EE - Soft cream */
+
+  /* Text Colors (WCAG AA compliant contrast) */
+  --text-primary: 58, 42, 32;       /* #3A2A20 - Rich brown */
+  --text-secondary: 107, 82, 68;    /* #6B5244 - Medium brown */
+  --text-muted: 148, 125, 110;      /* #947D6E - Muted brown */
+
+  /* Accent Colors (Orange palette) */
+  --accent-primary: 232, 113, 47;   /* #E8712F - Rich orange */
+  --accent-secondary: 245, 166, 106;/* #F5A66A - Soft orange */
+  --accent-light: 253, 220, 189;    /* #FDDCBD - Pale orange */
+  --accent-dark: 194, 84, 26;       /* #C2541A - Deep orange */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: rgb(var(--text-primary));
+  background: rgb(var(--bg-primary));
 }
 
 main {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--text-primary));
 }
 
 header {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(var(--text-primary));
 }
 
 footer {
-  color: rgba(255, 255, 255, 0.7);
-  background: linear-gradient(to right, rgb(15, 15, 15), rgb(25, 25, 30));
+  color: rgb(var(--text-secondary));
+  background: rgb(var(--bg-secondary));
+  border-top: 1px solid rgba(var(--accent-primary), 0.12);
 }
 
+/* Typography */
 .oswald-font {
   font-family: var(--font-oswald), sans-serif;
 }
@@ -39,34 +60,94 @@ footer {
   font-family: var(--font-bebas-neue), sans-serif;
 }
 
-/* Glass morphism effect */
+/* Glass morphism - Light theme */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(var(--accent-primary), 0.08);
+  box-shadow: 0 4px 24px rgba(var(--text-primary), 0.04);
+}
+
+/* Card style */
+.card {
+  background: rgb(var(--bg-secondary));
+  border: 1px solid rgba(var(--accent-primary), 0.1);
+  box-shadow: 0 2px 12px rgba(var(--text-primary), 0.03);
 }
 
 /* Glow effects */
-.glow-cyan {
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+.glow-orange {
+  box-shadow: 0 0 24px rgba(var(--accent-primary), 0.25);
 }
 
-.glow-purple {
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+.glow-soft {
+  box-shadow: 0 0 20px rgba(var(--accent-secondary), 0.3);
 }
 
-.text-glow-cyan {
-  text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+.text-glow {
+  text-shadow: 0 0 20px rgba(var(--accent-primary), 0.3);
 }
 
-.text-glow-purple {
-  text-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+/* Project card color-specific hover effects */
+.project-card {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+/* Red theme glow */
+.project-card-red::before {
+  background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(249,115,22,0.08));
+  box-shadow: inset 0 0 30px rgba(239,68,68,0.1);
+}
+.project-card-red:hover {
+  box-shadow: 0 25px 60px rgba(239,68,68,0.25), 0 0 0 1px rgba(239,68,68,0.3);
+}
+
+/* Amber theme glow */
+.project-card-amber::before {
+  background: linear-gradient(135deg, rgba(217,119,6,0.08), rgba(234,179,8,0.08));
+  box-shadow: inset 0 0 30px rgba(217,119,6,0.1);
+}
+.project-card-amber:hover {
+  box-shadow: 0 25px 60px rgba(217,119,6,0.25), 0 0 0 1px rgba(217,119,6,0.3);
+}
+
+/* Emerald theme glow */
+.project-card-emerald::before {
+  background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(20,184,166,0.08));
+  box-shadow: inset 0 0 30px rgba(16,185,129,0.1);
+}
+.project-card-emerald:hover {
+  box-shadow: 0 25px 60px rgba(16,185,129,0.25), 0 0 0 1px rgba(16,185,129,0.3);
+}
+
+/* Violet theme glow */
+.project-card-violet::before {
+  background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(168,85,247,0.08));
+  box-shadow: inset 0 0 30px rgba(139,92,246,0.1);
+}
+.project-card-violet:hover {
+  box-shadow: 0 25px 60px rgba(139,92,246,0.25), 0 0 0 1px rgba(139,92,246,0.3);
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, rgb(var(--accent-cyan)), rgb(var(--accent-purple)));
+  background: linear-gradient(135deg, rgb(var(--accent-primary)), rgb(var(--accent-dark)));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -74,9 +155,14 @@ footer {
 
 /* Animated gradient background */
 .animated-gradient {
-  background: linear-gradient(-45deg, #0a0a0a, #1a1a2e, #16213e, #0f0f0f);
+  background: linear-gradient(-45deg,
+    rgb(var(--bg-primary)),
+    rgb(var(--bg-secondary)),
+    rgb(255, 252, 248),
+    rgb(var(--bg-primary))
+  );
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 20s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -88,19 +174,20 @@ footer {
 /* Grid background pattern */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(var(--accent-primary), 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-primary), 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* Card hover effect */
 .card-hover {
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(6, 182, 212, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(var(--accent-primary), 0.15);
+  border-color: rgba(var(--accent-primary), 0.2);
 }
 
 /* Link underline animation */
@@ -115,12 +202,42 @@ footer {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background: linear-gradient(90deg, rgb(var(--accent-cyan)), rgb(var(--accent-purple)));
+  background: linear-gradient(90deg, rgb(var(--accent-primary)), rgb(var(--accent-secondary)));
   transition: width 0.3s ease;
 }
 
 .link-underline:hover::after {
   width: 100%;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, rgb(var(--accent-primary)), rgb(var(--accent-dark)));
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(var(--accent-primary), 0.35);
+  transform: translateY(-2px);
+}
+
+/* Form inputs */
+.input-field {
+  background: rgb(var(--bg-secondary));
+  border: 1px solid rgba(var(--accent-primary), 0.15);
+  color: rgb(var(--text-primary));
+  transition: all 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: rgb(var(--text-muted));
+}
+
+.input-field:focus {
+  border-color: rgb(var(--accent-primary));
+  box-shadow: 0 0 0 3px rgba(var(--accent-primary), 0.1);
+  outline: none;
 }
 
 @layer utilities {
