@@ -62,13 +62,13 @@ const projects = [
     },
   },
   {
-    href: 'https://myblackjack.web.app/',
-    image: '/black-jack.png',
+    href: 'https://black-jack-three-tau.vercel.app/',
+    image: '/black-jack-renew.png',
     alt: 'BLACK JACK',
     title: 'BLACK JACK',
     description: 'トランプのブラックジャックゲーム。',
     details: '本格的なブラックジャックをブラウザで楽しめます。',
-    tech: 'JavaScript',
+    tech: 'Next.js',
     cardClass: 'project-card project-card-violet',
     color: {
       bg: 'bg-gradient-to-br from-violet-50 to-purple-50',
