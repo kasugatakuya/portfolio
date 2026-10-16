@@ -5,6 +5,44 @@ import Link from 'next/link'
 
 const projects = [
   {
+    href: 'https://typing-game-rho-weld.vercel.app/',
+    image: '/typing-indo.png',
+    alt: 'プログラミング道場',
+    title: '地理タイピングゲーム',
+    description: 'タイピング練習を手軽にゲーム感覚で楽しめるサイト。',
+    details:
+      'タイピングしながら,世界の国の国旗、世界遺産が学べる。さらに、都道府県、県庁所在地、県花、県鳥、県木が学べる。',
+    tech: 'Next.js / TypeScript',
+    cardClass: 'project-card project-card-emerald',
+    color: {
+      bg: 'bg-gradient-to-br from-emerald-50 to-teal-50',
+      bgHover: 'hover:from-emerald-100 hover:to-teal-100',
+      border: 'border-emerald-200',
+      borderHover: 'hover:border-emerald-400',
+      accent: 'text-emerald-600',
+      tag: 'bg-emerald-100 text-emerald-700',
+    },
+  },
+  {
+    href: 'https://engineer-tools-psi.vercel.app/',
+    image: '/engineer-tools.png',
+    alt: 'エンジニア道具箱',
+    title: 'エンジニア道具箱',
+    description: 'エンジニア向けの便利なツールを集めたサイト。',
+    details:
+      'エンジニア道具箱では、開発に役立つさまざまなツールやリソースをご覧いただけます。',
+    tech: 'Next.js / TypeScript',
+    cardClass: 'project-card project-card-blue',
+    color: {
+      bg: 'bg-gradient-to-br from-blue-50 to-cyan-50',
+      bgHover: 'hover:from-blue-100 hover:to-cyan-100',
+      border: 'border-blue-200',
+      borderHover: 'hover:border-blue-400',
+      accent: 'text-blue-500',
+      tag: 'bg-blue-100 text-blue-600',
+    },
+  },
+  {
     href: 'https://monkey-mauve-alpha.vercel.app/',
     image: '/monkey.png',
     alt: 'MONKEY',
@@ -40,25 +78,6 @@ const projects = [
       borderHover: 'hover:border-amber-400',
       accent: 'text-amber-600',
       tag: 'bg-amber-100 text-amber-700',
-    },
-  },
-  {
-    href: 'https://typing-game-rho-weld.vercel.app/',
-    image: '/typing-indo.png',
-    alt: 'プログラミング道場',
-    title: '地理タイピングゲーム',
-    description: 'タイピング練習を手軽にゲーム感覚で楽しめるサイト。',
-    details:
-      'タイピングしながら,世界の国の国旗、世界遺産が学べる。さらに、都道府県、県庁所在地、県花、県鳥、県木が学べる。',
-    tech: 'Next.js / TypeScript',
-    cardClass: 'project-card project-card-emerald',
-    color: {
-      bg: 'bg-gradient-to-br from-emerald-50 to-teal-50',
-      bgHover: 'hover:from-emerald-100 hover:to-teal-100',
-      border: 'border-emerald-200',
-      borderHover: 'hover:border-emerald-400',
-      accent: 'text-emerald-600',
-      tag: 'bg-emerald-100 text-emerald-700',
     },
   },
   {
