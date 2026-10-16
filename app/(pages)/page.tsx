@@ -43,6 +43,25 @@ const projects = [
     },
   },
   {
+    href: 'https://kokoro-diary-f5n7.vercel.app/',
+    image: '/kokoro-diary.png',
+    alt: '心 日記',
+    title: '心 日記',
+    description: '日々の心の動きを記録できる日記アプリ。',
+    details:
+      '心 日記では、日々の心の動きを簡単に記録し、振り返ることができます。',
+    tech: 'Next.js / TypeScript',
+    cardClass: 'project-card project-card-orange',
+    color: {
+      bg: 'bg-gradient-to-br from-orange-50 to-amber-50',
+      bgHover: 'hover:from-orange-100 hover:to-amber-100',
+      border: 'border-orange-200',
+      borderHover: 'hover:border-orange-400',
+      accent: 'text-orange-500',
+      tag: 'bg-orange-100 text-orange-600',
+    },
+  },
+  {
     href: 'https://monkey-mauve-alpha.vercel.app/',
     image: '/monkey.png',
     alt: 'MONKEY',
