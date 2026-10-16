@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://portfolio-rose-tau-96.vercel.app/sitemap.xml

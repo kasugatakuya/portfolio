@@ -1,6 +1,7 @@
 import UpButton from '@/app/components/UpButton'
+import { SITE_URL } from '@/app/lib/site'
 import type { Metadata } from 'next'
-import { Inter, Bebas_Neue, Noto_Sans_JP, Oswald } from 'next/font/google'
+import { Bebas_Neue, Inter, Noto_Sans_JP, Oswald } from 'next/font/google'
 import Link from 'next/link'
 import './globals.css'
 
@@ -30,18 +31,18 @@ export const metadata: Metadata = {
     'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策,ホームページなどの制作実績をご覧いただけます。',
   keywords:
     'フリーランス, エンジニア, ポートフォリオ, Web開発, アプリ開発, SEO対策, 春日拓也, kasuga takuya, カスガタクヤ, 人気, たくや, かすが,依頼, ホームページ',
-  metadataBase: new URL('https://portfolio-rose-tau-96.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     title: '春日拓也のポートフォリオサイト | フリーランスエンジニア',
     description:
       'フリーランスエンジニア春日拓也のポートフォリオサイトです。Web開発、アプリ開発、SEO対策などの制作実績をご覧いただけます。',
     type: 'website',
-    url: 'https://portfolio-rose-tau-96.vercel.app',
+    url: '/',
     siteName: '春日拓也のポートフォリオサイト',
     locale: 'ja_JP',
   },
   alternates: {
-    canonical: 'https://portfolio-rose-tau-96.vercel.app',
+    canonical: '/',
   },
   robots: {
     index: true,
@@ -72,24 +73,47 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${inter.className} ${bebasNeue.variable} ${notoSansJP.variable} ${oswald.variable} animated-gradient min-h-screen`}>
+      <body
+        className={`${inter.className} ${bebasNeue.variable} ${notoSansJP.variable} ${oswald.variable} animated-gradient min-h-screen`}
+      >
         <header className="fixed top-0 z-50 w-full">
           <nav
             className="glass flex items-center justify-end px-6 py-3 lg:px-20 lg:py-4"
             aria-label="Global"
           >
             <div className="flex gap-4 lg:gap-10">
-              <Link href="/" className="bebas-neue-font group font-bold text-content transition-all duration-300 hover:text-accent">
-                <div className="tracking-wider lg:text-xl link-underline">WORKS</div>
-                <div className="noto-sans-jp-font text-xs text-content-muted group-hover:text-accent-light">仕事内容</div>
+              <Link
+                href="/"
+                className="bebas-neue-font group font-bold text-content transition-all duration-300 hover:text-accent"
+              >
+                <div className="tracking-wider lg:text-xl link-underline">
+                  WORKS
+                </div>
+                <div className="noto-sans-jp-font text-xs text-content-muted group-hover:text-accent-light">
+                  仕事内容
+                </div>
               </Link>
-              <Link href="/about" className="bebas-neue-font group font-bold text-content transition-all duration-300 hover:text-accent">
-                <div className="tracking-wider lg:text-xl link-underline">ABOUT</div>
-                <div className="noto-sans-jp-font text-xs text-content-muted group-hover:text-accent-light">経歴</div>
+              <Link
+                href="/about"
+                className="bebas-neue-font group font-bold text-content transition-all duration-300 hover:text-accent"
+              >
+                <div className="tracking-wider lg:text-xl link-underline">
+                  ABOUT
+                </div>
+                <div className="noto-sans-jp-font text-xs text-content-muted group-hover:text-accent-light">
+                  経歴
+                </div>
               </Link>
-              <Link href="/contact" className="bebas-neue-font group font-bold text-content transition-all duration-300 hover:text-accent">
-                <div className="tracking-wider lg:text-xl link-underline">CONTACT</div>
-                <div className="noto-sans-jp-font text-xs text-content-muted group-hover:text-accent-light">お問い合わせ</div>
+              <Link
+                href="/contact"
+                className="bebas-neue-font group font-bold text-content transition-all duration-300 hover:text-accent"
+              >
+                <div className="tracking-wider lg:text-xl link-underline">
+                  CONTACT
+                </div>
+                <div className="noto-sans-jp-font text-xs text-content-muted group-hover:text-accent-light">
+                  お問い合わせ
+                </div>
               </Link>
             </div>
           </nav>
